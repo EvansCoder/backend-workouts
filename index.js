@@ -25,7 +25,9 @@ mongoose.connect(MONGODB_URI, {
   );
 
 // routes
-
+app.get('/',(req,res)=>{
+  res.json({status:"OK"})
+})
 app.use("/exercises", exercisesRouter);
 app.use("/users", usersRouter);
 // listen
